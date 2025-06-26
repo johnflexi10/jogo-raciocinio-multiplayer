@@ -13,7 +13,11 @@ app.use(cors());
 
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: "*", methods: ["GET", "POST"] }
+  cors: {
+    // COLOQUE O LINK DO SEU JOGO NO VERCEL AQUI
+    origin: "https://jogo-raciocinio-multiplayer.vercel.app", 
+    methods: ["GET", "POST"]
+  }
 });
 
 const MAX_PLAYERS = 8;
